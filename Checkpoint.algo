@@ -1,0 +1,25 @@
+ALGORITHM checkpoint algo 1
+VAR
+    word_number : INTEGER := 0;
+    vowel_number : INTEGER := 0;
+    chacarter : CHAR := "";
+    character_number : INTEGER := 0;
+BEGIN
+    WHILE (chacarter <> ".") DO
+        Read(chacarter);
+        character_number := character_number +1;
+        IF (chacarter = "a" OR "e" OR "i" OR "o" OR "u" OR "y") THEN
+            vowel_number := vowel_number +1;
+        END_IF
+
+        IF (chacarter= " ") 
+        THEN
+            word_number := word_number +1;
+        END_IF
+        
+    END_WHILE
+
+    Write("The length of the sentence is ",character_number);
+    Write("The number of words in the sentence is ",word_number);
+    Write("he number of vowels in the sentence. is ",vowel_number);
+END
